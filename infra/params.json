@@ -45,15 +45,6 @@
         },
         "functionSubnetId": {
             "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/FunctionSubnet"
-        },
-        "privateDnsZoneIdBlob": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"
-        },
-        "privateDnsZoneIdFile": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net"
-        },
-        "privateDnsZoneIdKeyVault": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net"
         }
     }
 }
