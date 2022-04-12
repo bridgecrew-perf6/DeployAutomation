@@ -21,7 +21,7 @@ param privateDnsZoneIdFile string
 param privateDnsZoneIdKeyVault string
 
 // Variables
-var storage001Name = '${prefix}-storagevj'
+var storage001Name = '${prefix}-storage001'
 var applicationInsights001Name = '${prefix}-insights001'
 var keyvault001Name = '${prefix}-vault001'
 var function001Name = '${prefix}-function001'
