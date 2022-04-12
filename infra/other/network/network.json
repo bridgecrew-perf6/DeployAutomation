@@ -24,7 +24,7 @@
     },
     "servicesSubnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.0.0/24"
+      "defaultValue": "10.0.2.0/24"
     },
     "functionSubnetAddressPrefix": {
       "type": "string",
@@ -36,7 +36,7 @@
   },
   "variables": {
     "servicesSubnetName": "ServicesSubnet",
-    "functionSubnetName": "FunctionSubnet",
+    "functionSubnetName": "functionSubnet",
     "routeTableName": "[format('{0}-routetable', parameters('prefix'))]",
     "nsgName": "[format('{0}-nsg', parameters('prefix'))]"
   },
