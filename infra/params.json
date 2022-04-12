@@ -41,19 +41,19 @@
             "value": false
         },
         "subnetId": {
-            "value": "/subscriptions/4060c03e-0d2e-44b7-82a3-da9376fe50b2/resourceGroups/prvw-atmtn-dev-network/providers/Microsoft.Network/virtualNetworks/prvw-atmtn-dev-vnet/subnets/ServicesSubnet"
+            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/ServicesSubnet"
         },
         "functionSubnetId": {
-            "value": "/subscriptions/4060c03e-0d2e-44b7-82a3-da9376fe50b2/resourceGroups/prvw-atmtn-dev-network/providers/Microsoft.Network/virtualNetworks/prvw-atmtn-dev-vnet/subnets/FunctionSubnet"
+            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/FunctionSubnet"
         },
         "privateDnsZoneIdBlob": {
-            "value": "/subscriptions/17588eb2-2943-461a-ab3f-00a3ceac3112/resourceGroups/dmz-dev-global-dns/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"
+            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"
         },
         "privateDnsZoneIdFile": {
-            "value": "/subscriptions/17588eb2-2943-461a-ab3f-00a3ceac3112/resourceGroups/dmz-dev-global-dns/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net"
+            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net"
         },
         "privateDnsZoneIdKeyVault": {
-            "value": "/subscriptions/17588eb2-2943-461a-ab3f-00a3ceac3112/resourceGroups/dmz-dev-global-dns/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net"
+            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net"
         }
     }
 }
