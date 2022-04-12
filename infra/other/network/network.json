@@ -24,11 +24,11 @@
     },
     "servicesSubnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.0.0/27"
+      "defaultValue": "10.0.0.0/24"
     },
     "functionSubnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.0.32/27"
+      "defaultValue": "10.0.0.0/24"
     },
     "dnsServers": {
       "type": "array"
