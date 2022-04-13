@@ -23,7 +23,8 @@ param privateDnsZoneIdKeyVault string
 // Variables
 var storage001Name = '${prefix}-storage001'
 var applicationInsights001Name = '${prefix}-insights001'
-var keyvault001Name = '${prefix}-vault002'
+
+var keyvault001Name = '${prefix}-vault001'
 var function001Name = '${prefix}-function001'
 var function001FileShareName = function001Name
 
@@ -60,6 +61,7 @@ module applicationInsights001 'services/applicationinsights.bicep' = {
 
 module keyvault001 'services/keyvault.bicep' = {
   name: 'keyvault001'
+
   scope: resourceGroup()
   params: {
     location: location
@@ -70,12 +72,13 @@ module keyvault001 'services/keyvault.bicep' = {
   }
 }
 
-module keyvault001Secrets 'auxiliary/keyVaultSecretDeployment.bicep' = {
-  name: 'keyvault001Secrets'
+module keyvault002Secrets 'auxiliary/keyVaultSecretDeployment.bicep' = {
+  name: 'keyvault002Secrets'
   scope: resourceGroup()
   params: {
+
     keyVaultId: keyvault001.outputs.keyvaultId
-    applicationInsightsId: applicationInsights001.outputs.applicationInsightsId
+  applicationInsightsId: applicationInsights001.outputs.applicationInsightsId
     storageId: storage001.outputs.storageId
   }
 }
@@ -115,7 +118,7 @@ module roleAssignmentFunctionKeyVault 'auxiliary/functionRoleAssignmentKeyVault.
   name: 'roleAssignmentFunctionKeyVault'
   scope: resourceGroup()
   params: {
-    keyVaultId: keyvault002.outputs.keyvaultId
+    keyVaultId: keyvault001.outputs.keyvaultId
     functionId: function001.outputs.functionId
   }
 }
