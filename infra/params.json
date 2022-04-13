@@ -41,10 +41,10 @@
             "value": false
         },
         "subnetId": {
-            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/ServicesSubnet"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/virtualNetworks/AutomationSupportVnet/subnets/ServicesSubnet"
         },
         "functionSubnetId": {
-            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/FunctionSubnet"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/virtualNetworks/AutomationSupportVnet/subnets/FunctionSubnet"
         },
         
         "privateDnsZoneIdBlob": {
