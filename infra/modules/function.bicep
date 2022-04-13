@@ -21,10 +21,10 @@ param privateDnsZoneIdFile string
 param privateDnsZoneIdKeyVault string
 
 // Variables
-var storage001Name = '${prefix}-storage001'
-var applicationInsights001Name = '${prefix}-insights001'
-var keyvault001Name = '${prefix}-vault001'
-var function001Name = '${prefix}-function001'
+var storage001Name = '${prefix}-storage002'
+var applicationInsights001Name = '${prefix}-insights002'
+var keyvault001Name = '${prefix}-vault002'
+var function001Name = '${prefix}-function002'
 var function001FileShareName = function001Name
 
 // Resources
