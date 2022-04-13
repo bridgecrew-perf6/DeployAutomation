@@ -23,7 +23,7 @@ param privateDnsZoneIdKeyVault string
 // Variables
 var storage001Name = '${prefix}-storage001'
 var applicationInsights001Name = '${prefix}-insights001'
-var keyvault001Name = '${prefix}-vault001'
+var keyvault001Name = '${prefix}-vault002'
 var function001Name = '${prefix}-function001'
 var function001FileShareName = function001Name
 
@@ -58,14 +58,14 @@ module applicationInsights001 'services/applicationinsights.bicep' = {
   }
 }
 
-module keyVault001 'services/keyvault.bicep' = {
-  name: 'keyVault001'
+module keyvault001 'services/keyvault.bicep' = {
+  name: 'keyvault001'
   scope: resourceGroup()
   params: {
     location: location
     tags: tags
     subnetId: subnetId
-    keyvaultName: keyvault001Name
+    keyvaultName: keyvault002Name
     privateDnsZoneIdKeyVault: privateDnsZoneIdKeyVault
   }
 }
@@ -74,7 +74,7 @@ module keyvault001Secrets 'auxiliary/keyVaultSecretDeployment.bicep' = {
   name: 'keyvault001Secrets'
   scope: resourceGroup()
   params: {
-    keyVaultId: keyVault001.outputs.keyvaultId
+    keyVaultId: keyvault001.outputs.keyvaultId
     applicationInsightsId: applicationInsights001.outputs.applicationInsightsId
     storageId: storage001.outputs.storageId
   }
@@ -105,9 +105,9 @@ module function001AppSettings 'services/functionAppSettings.bicep' = {
     purviewRootCollectionName: purviewRootCollectionName
     purviewRootCollectionMetadataPolicyId: purviewRootCollectionMetadataPolicyId
     functionFileShareName: function001FileShareName
-    storageConnectionStringSecretUri: keyvault001Secrets.outputs.storageConnectionStringSecretUri
-    applicationInsightsInstrumentationKeySecretUri: keyvault001Secrets.outputs.applicationInsightsInstrumentationKeySecretUri
-    applicationInsightsConnectionStringSecretUri: keyvault001Secrets.outputs.applicationInsightsConnectionStringSecretUri
+    storageConnectionStringSecretUri: keyvault002Secrets.outputs.storageConnectionStringSecretUri
+    applicationInsightsInstrumentationKeySecretUri: keyvault002Secrets.outputs.applicationInsightsInstrumentationKeySecretUri
+    applicationInsightsConnectionStringSecretUri: keyvault002Secrets.outputs.applicationInsightsConnectionStringSecretUri
   }
 }
 
@@ -115,7 +115,7 @@ module roleAssignmentFunctionKeyVault 'auxiliary/functionRoleAssignmentKeyVault.
   name: 'roleAssignmentFunctionKeyVault'
   scope: resourceGroup()
   params: {
-    keyVaultId: keyVault001.outputs.keyvaultId
+    keyVaultId: keyvault002.outputs.keyvaultId
     functionId: function001.outputs.functionId
   }
 }
