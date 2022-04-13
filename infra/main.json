@@ -261,7 +261,7 @@
           "variables": {
             "storage001Name": "[format('{0}-storage001', parameters('prefix'))]",
             "applicationInsights001Name": "[format('{0}-insights001', parameters('prefix'))]",
-            "keyvault001Name": "[format('{0}-vault001', parameters('prefix'))]",
+            "keyvault002Name": "[format('{0}-vault002', parameters('prefix'))]",
             "function001Name": "[format('{0}-function001', parameters('prefix'))]",
             "function001FileShareName": "[variables('function001Name')]"
           },
@@ -774,7 +774,7 @@
             {
               "type": "Microsoft.Resources/deployments",
               "apiVersion": "2020-10-01",
-              "name": "keyVault001",
+              "name": "keyvault002",
               "properties": {
                 "expressionEvaluationOptions": {
                   "scope": "inner"
@@ -791,7 +791,7 @@
                     "value": "[parameters('subnetId')]"
                   },
                   "keyvaultName": {
-                    "value": "[variables('keyvault001Name')]"
+                    "value": "[variables('keyvault002Name')]"
                   },
                   "privateDnsZoneIdKeyVault": {
                     "value": "[parameters('privateDnsZoneIdKeyVault')]"
@@ -918,7 +918,7 @@
             {
               "type": "Microsoft.Resources/deployments",
               "apiVersion": "2020-10-01",
-              "name": "keyvault001Secrets",
+              "name": "keyvault002Secrets",
               "properties": {
                 "expressionEvaluationOptions": {
                   "scope": "inner"
@@ -926,7 +926,7 @@
                 "mode": "Incremental",
                 "parameters": {
                   "keyVaultId": {
-                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyVault001'), '2020-10-01').outputs.keyvaultId.value]"
+                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault002'), '2020-10-01').outputs.keyvaultId.value]"
                   },
                   "applicationInsightsId": {
                     "value": "[reference(resourceId('Microsoft.Resources/deployments', 'applicationInsights001'), '2020-10-01').outputs.applicationInsightsId.value]"
@@ -1024,7 +1024,7 @@
               },
               "dependsOn": [
                 "[resourceId('Microsoft.Resources/deployments', 'applicationInsights001')]",
-                "[resourceId('Microsoft.Resources/deployments', 'keyVault001')]",
+                "[resourceId('Microsoft.Resources/deployments', 'keyvault002')]",
                 "[resourceId('Microsoft.Resources/deployments', 'storage001')]"
               ]
             },
@@ -1201,13 +1201,13 @@
                     "value": "[variables('function001FileShareName')]"
                   },
                   "storageConnectionStringSecretUri": {
-                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault001Secrets'), '2020-10-01').outputs.storageConnectionStringSecretUri.value]"
+                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault002Secrets'), '2020-10-01').outputs.storageConnectionStringSecretUri.value]"
                   },
                   "applicationInsightsInstrumentationKeySecretUri": {
-                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault001Secrets'), '2020-10-01').outputs.applicationInsightsInstrumentationKeySecretUri.value]"
+                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault002Secrets'), '2020-10-01').outputs.applicationInsightsInstrumentationKeySecretUri.value]"
                   },
                   "applicationInsightsConnectionStringSecretUri": {
-                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault001Secrets'), '2020-10-01').outputs.applicationInsightsConnectionStringSecretUri.value]"
+                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault002Secrets'), '2020-10-01').outputs.applicationInsightsConnectionStringSecretUri.value]"
                   }
                 },
                 "template": {
@@ -1291,7 +1291,7 @@
               },
               "dependsOn": [
                 "[resourceId('Microsoft.Resources/deployments', 'function001')]",
-                "[resourceId('Microsoft.Resources/deployments', 'keyvault001Secrets')]",
+                "[resourceId('Microsoft.Resources/deployments', 'keyvault002Secrets')]",
                 "[resourceId('Microsoft.Resources/deployments', 'roleAssignmentFunctionKeyVault')]"
               ]
             },
@@ -1306,7 +1306,7 @@
                 "mode": "Incremental",
                 "parameters": {
                   "keyVaultId": {
-                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyVault001'), '2020-10-01').outputs.keyvaultId.value]"
+                    "value": "[reference(resourceId('Microsoft.Resources/deployments', 'keyvault002'), '2020-10-01').outputs.keyvaultId.value]"
                   },
                   "functionId": {
                     "value": "[reference(resourceId('Microsoft.Resources/deployments', 'function001'), '2020-10-01').outputs.functionId.value]"
@@ -1351,7 +1351,7 @@
               },
               "dependsOn": [
                 "[resourceId('Microsoft.Resources/deployments', 'function001')]",
-                "[resourceId('Microsoft.Resources/deployments', 'keyVault001')]"
+                "[resourceId('Microsoft.Resources/deployments', 'keyvault002')]"
               ]
             },
             {
