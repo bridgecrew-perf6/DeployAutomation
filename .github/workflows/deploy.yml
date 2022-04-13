@@ -17,7 +17,7 @@ on:
 env:
   DOTNET_VERSION: "6.0.x"
   WORKING_DIRECTORY: "code/"
-  AZURE_SUBSCRIPTION_ID: "60aa2a27-1f73-4075-8a75-28fede538886"  # Update to '{dataLandingZoneSubscriptionId}'
+  AZURE_SUBSCRIPTION_ID: "ae446179-2997-48af-9641-50c37b303960"  # Update to '{dataLandingZoneSubscriptionId}'
   AZURE_LOCATION: "eastus"                                  # Update to '{regionName}'
 
 

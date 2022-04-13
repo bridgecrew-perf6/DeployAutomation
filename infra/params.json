@@ -15,16 +15,16 @@
             "value": {}
         },
         "purviewId": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Purview/accounts/self-learning-purview"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Purview/accounts/AzurePurviewAutomationTest"
         },
         "purviewManagedStorageId": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/managed-rg-self-learning-purview/providers/Microsoft.Storage/storageAccounts/scaneastuspyepcus"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/managed-rg-AzurePurviewAutomationTest/providers/Microsoft.Storage/storageAccounts/scaneastusmqeijwj"
         },
         "purviewManagedEventHubId": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/managed-rg-self-learning-purview/providers/Microsoft.EventHub/namespaces/Atlas-567c8d6a-a35d-4eee-bb2f-8c26ba96b3f9"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/managed-rg-AzurePurviewAutomationTest/providers/Microsoft.EventHub/namespaces/Atlas-eb2ef970-e8b8-40b8-a3fb-198182f0a8ec"
         },
         "purviewRootCollectionName": {
-            "value": "self-learning-purview"
+            "value": "AzurePurviewAutomationTest"
         },
         "purviewRootCollectionMetadataPolicyId": {
             "value": ""
@@ -32,7 +32,7 @@
         "eventGridTopicSourceSubscriptions": {
             "value": [
                {
-                   "subscriptionId": "60aa2a27-1f73-4075-8a75-28fede538886",
+                   "subscriptionId": "ae446179-2997-48af-9641-50c37b303960",
                    "location": "eastus"
                }
             ]
@@ -41,20 +41,20 @@
             "value": false
         },
         "subnetId": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/ServicesSubnet"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/ServicesSubnet"
         },
         "functionSubnetId": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/FunctionSubnet"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/virtualNetworks/subnetprivate/subnets/FunctionSubnet"
         },
         
         "privateDnsZoneIdBlob": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"
         },
         "privateDnsZoneIdFile": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net"
         },
         "privateDnsZoneIdKeyVault": {
-            "value": "/subscriptions/60aa2a27-1f73-4075-8a75-28fede538886/resourceGroups/self-learning/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net"
+            "value": "/subscriptions/ae446179-2997-48af-9641-50c37b303960/resourceGroups/AutomationPurview/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net"
         }
     }
 }

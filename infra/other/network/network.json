@@ -20,15 +20,15 @@
     },
     "vnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.0.0/16"
+      "defaultValue": "10.2.0.0/16"
     },
     "servicesSubnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.2.0/24"
+      "defaultValue": "10.2.1.0/24"
     },
     "functionSubnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.1.0/24"
+      "defaultValue": "10.2.2.0/24"
     },
     "dnsServers": {
       "type": "array"
@@ -36,7 +36,7 @@
   },
   "variables": {
     "servicesSubnetName": "ServicesSubnet",
-    "functionSubnetName": "functionSubnet",
+    "functionSubnetName": "FunctionSubnet",
     "routeTableName": "[format('{0}-routetable', parameters('prefix'))]",
     "nsgName": "[format('{0}-nsg', parameters('prefix'))]"
   },
